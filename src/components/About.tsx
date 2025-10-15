@@ -1,5 +1,4 @@
 import { CheckCircle2 } from "lucide-react";
-import logo from "@/assets/logo-main.jpg";
 
 export const About = () => {
   const values = [
@@ -43,7 +42,7 @@ export const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-2xl transform rotate-3"></div>
               <img 
-                src={logo} 
+                src="/flyer.png" 
                 alt="The Bridge Project - Bridging the gap between homelessness and humanity" 
                 className="relative max-w-md w-full h-auto rounded-2xl shadow-brand-2xl bg-white p-8 lg:p-12"
               />

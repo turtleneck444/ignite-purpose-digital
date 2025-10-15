@@ -80,7 +80,7 @@ export const Footer = () => {
               © {currentYear} The Bridge Project. All rights reserved.
             </p>
             <p className="opacity-90 flex items-center gap-2 text-sm lg:text-base">
-              Made with <Heart className="w-4 h-4 fill-current" /> for our community
+              Made with <Heart className="w-4 h-4 fill-pink-500 text-pink-500" /> for our community
             </p>
           </div>
         </div>
