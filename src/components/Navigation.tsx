@@ -25,7 +25,7 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b shadow-brand-lg">
+    <nav className="sticky top-10 left-0 right-0 z-40 bg-white border-b shadow-brand-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
@@ -49,7 +49,6 @@ export const Navigation = () => {
               <button
                 onClick={handleImpactClick}
                 onMouseEnter={() => setIsImpactOpen(true)}
-                onMouseLeave={() => setIsImpactOpen(false)}
                 className="px-4 py-2 text-foreground hover:text-primary transition-colors font-semibold text-sm xl:text-base flex items-center gap-1"
               >
                 Our Impact

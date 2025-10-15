@@ -11,7 +11,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-20 lg:pt-24 overflow-hidden">
+    <section id="hero" className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-28 lg:pt-32 overflow-hidden">
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -28,7 +28,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl xl:max-w-5xl">
           {/* Professional Trust Indicators */}
-          <div className="flex flex-wrap items-center gap-4 mb-8 lg:mb-10 mt-8 lg:mt-12 animate-in fade-in slide-in-from-top duration-700">
+          <div className="flex flex-wrap items-center gap-4 mb-8 lg:mb-10 -mt-24 lg:-mt-28 animate-in fade-in slide-in-from-top duration-700">
             <div className="flex items-center gap-2 bg-white/98 backdrop-blur-md px-5 py-3 rounded-full shadow-brand-xl border border-primary/30 hover:shadow-brand-2xl transition-all duration-300 hover:scale-105">
               <Shield className="w-5 h-5 text-primary drop-shadow-sm" />
               <span className="text-sm font-bold text-foreground drop-shadow-sm">501(c)(3) Certified</span>
@@ -54,8 +54,8 @@ export const Hero = () => {
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6 leading-tight text-foreground">
-                <span className="block lg:inline">Together, we can bring</span>
-                <span className="block text-primary animate-pulse">hope to the homeless</span>
+                <span className="inline">Together, we can bring </span>
+                <span className="inline text-primary animate-pulse">hope to the homeless</span>
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-foreground/90 leading-relaxed max-w-3xl">
                 We provide food, clothing, and support to the homeless and less fortunate. 
@@ -91,16 +91,41 @@ export const Hero = () => {
               variant="hero" 
               size="xl" 
               onClick={() => scrollToSection("donate")}
-              className="group shadow-brand-xl hover:shadow-brand-2xl transition-all duration-300 hover:scale-105 drop-shadow-lg"
+              className="group relative bg-gradient-to-br from-primary via-primary-light to-primary-dark text-white shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-110 hover:-translate-y-2 drop-shadow-2xl border-2 border-white/30 hover:border-white/60 overflow-hidden transform-gpu"
             >
-              Donate Now
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              {/* 3D Background Layers */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/10 to-white/20 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:animate-pulse"></div>
+              
+              {/* 3D Inner Shadow */}
+              <div className="absolute inset-2 bg-gradient-to-br from-white/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Content with 3D Text Effect */}
+              <span className="relative z-20 flex items-center gap-3 transform group-hover:translate-z-4 transition-all duration-500">
+                <span className="font-bold text-lg tracking-wide group-hover:drop-shadow-2xl transition-all duration-500">Donate Now</span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-500 drop-shadow-lg" />
+              </span>
+              
+              {/* 3D Animated Border */}
+              <div className="absolute inset-0 rounded-lg border-2 border-white/40 group-hover:border-white/80 transition-all duration-500 shadow-inner"></div>
+              <div className="absolute inset-1 rounded-lg border border-white/20 group-hover:border-white/40 transition-all duration-500"></div>
+              
+              {/* 3D Hover Glow Effect */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 blur-sm"></div>
+              
+              {/* Subtle Corner Highlights */}
+              <div className="absolute top-0 left-0 w-4 h-4 bg-gradient-to-br from-white/20 to-transparent rounded-br-sm opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 bg-gradient-to-tl from-white/20 to-transparent rounded-tl-sm opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
+              
+              {/* 3D Depth Shadow */}
+              <div className="absolute inset-0 rounded-lg shadow-2xl group-hover:shadow-3xl transition-all duration-700"></div>
             </Button>
             <Button 
               variant="outline" 
               size="xl"
               onClick={() => scrollToSection("help")}
-              className="border-2 border-primary/20 hover:border-primary/40 shadow-brand-md hover:shadow-brand-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 hover:bg-white/90"
+              className="border-2 border-primary/20 hover:border-primary/40 shadow-brand-md hover:shadow-brand-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 hover:bg-white/90 hover:text-black"
             >
               Get Involved
             </Button>
