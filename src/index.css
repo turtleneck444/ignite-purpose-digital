@@ -9,42 +9,48 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 200 15% 15%;
+    --foreground: 215 25% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 15% 15%;
+    --card-foreground: 215 25% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 15% 15%;
+    --popover-foreground: 215 25% 20%;
 
-    --primary: 195 65% 25%;
+    --primary: 203 64% 45%;
     --primary-foreground: 0 0% 100%;
     
-    --primary-light: 195 55% 45%;
-    --primary-lighter: 195 45% 65%;
+    --primary-light: 203 64% 55%;
+    --primary-lighter: 203 54% 70%;
+    --primary-dark: 203 64% 35%;
 
-    --secondary: 195 20% 95%;
-    --secondary-foreground: 195 65% 25%;
+    --secondary: 203 30% 96%;
+    --secondary-foreground: 203 64% 35%;
 
-    --muted: 195 15% 96%;
-    --muted-foreground: 200 10% 45%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 50%;
 
-    --accent: 195 55% 45%;
+    --accent: 203 64% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 195 15% 88%;
-    --input: 195 15% 88%;
-    --ring: 195 65% 25%;
+    --border: 210 20% 90%;
+    --input: 210 20% 92%;
+    --ring: 203 64% 45%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
     
-    --shadow-sm: 0 2px 8px rgba(26, 95, 122, 0.08);
-    --shadow-md: 0 4px 16px rgba(26, 95, 122, 0.12);
-    --shadow-lg: 0 8px 32px rgba(26, 95, 122, 0.16);
-    --shadow-xl: 0 16px 48px rgba(26, 95, 122, 0.24);
+    --shadow-sm: 0 1px 3px rgba(41, 122, 188, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px rgba(41, 122, 188, 0.10), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px rgba(41, 122, 188, 0.12), 0 4px 6px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 25px rgba(41, 122, 188, 0.15), 0 10px 10px rgba(0, 0, 0, 0.10);
+    --shadow-2xl: 0 25px 50px rgba(41, 122, 188, 0.20), 0 10px 20px rgba(0, 0, 0, 0.12);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(203, 64%, 45%) 0%, hsl(203, 64%, 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(203, 64%, 42%) 0%, hsl(203, 74%, 52%) 100%);
+    --gradient-overlay: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
 
     --sidebar-background: 0 0% 98%;
 
@@ -64,36 +70,37 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 200 20% 8%;
+    --background: 215 30% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 200 18% 12%;
+    --card: 215 25% 14%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 200 20% 8%;
+    --popover: 215 30% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 195 55% 45%;
+    --primary: 203 64% 55%;
     --primary-foreground: 0 0% 100%;
     
-    --primary-light: 195 55% 55%;
-    --primary-lighter: 195 45% 70%;
+    --primary-light: 203 64% 65%;
+    --primary-lighter: 203 54% 75%;
+    --primary-dark: 203 64% 45%;
 
-    --secondary: 200 15% 18%;
+    --secondary: 215 20% 20%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 200 15% 18%;
-    --muted-foreground: 195 10% 65%;
+    --muted: 215 20% 20%;
+    --muted-foreground: 210 15% 65%;
 
-    --accent: 195 55% 45%;
+    --accent: 203 64% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 15% 22%;
-    --input: 200 15% 22%;
-    --ring: 195 55% 45%;
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 203 64% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -117,6 +124,7 @@ All colors MUST be HSL.
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    font-weight: 700;
   }
 }
 
@@ -135,5 +143,24 @@ All colors MUST be HSL.
   
   .shadow-brand-xl {
     box-shadow: var(--shadow-xl);
+  }
+  
+  .shadow-brand-2xl {
+    box-shadow: var(--shadow-2xl);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

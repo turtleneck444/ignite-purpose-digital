@@ -13,7 +13,8 @@ export const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    interest: "general"
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -31,12 +32,12 @@ export const Contact = () => {
 
     // In a real application, this would send to a backend
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
+      title: "Message Sent Successfully! ✓",
+      description: "Thank you for reaching out. We'll respond within 24 hours.",
     });
 
     // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", message: "", interest: "general" });
   };
 
   const contactInfo = [
@@ -47,21 +48,26 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-secondary">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have questions or want to get involved? We'd love to hear from you.
+    <section id="contact" className="py-16 lg:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 lg:mb-16">
+          <div className="inline-block mb-4 lg:mb-6">
+            <span className="text-primary font-bold text-sm uppercase tracking-wider bg-primary/10 px-4 py-2 rounded-full">
+              Contact Us
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">Get in Touch</h2>
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Have questions or want to get involved? We're here to help and respond within 24 hours.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="shadow-brand-lg">
+          <Card className="shadow-brand-xl border-2 border-border hover:border-primary/30 transition-colors">
             <CardHeader>
-              <CardTitle className="text-2xl">Send Us a Message</CardTitle>
-              <CardDescription>Fill out the form and we'll respond within 24 hours</CardDescription>
+              <CardTitle className="text-2xl lg:text-3xl">Send Us a Message</CardTitle>
+              <CardDescription className="text-base">We typically respond within 24 hours</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -115,11 +121,11 @@ export const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6">
-            <Card className="shadow-brand-lg">
+          <div className="space-y-6 lg:space-y-8">
+            <Card className="shadow-brand-xl border-2 border-primary/20">
               <CardHeader>
-                <CardTitle className="text-2xl">Contact Information</CardTitle>
-                <CardDescription>Reach out through any of these channels</CardDescription>
+                <CardTitle className="text-2xl lg:text-3xl">Contact Information</CardTitle>
+                <CardDescription className="text-base">Multiple ways to reach us</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactInfo.map((info, index) => (

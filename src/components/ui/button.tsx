@@ -9,13 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-brand-md hover:shadow-brand-lg transition-all duration-300",
+        default: "gradient-primary text-primary-foreground hover:opacity-90 shadow-brand-lg hover:shadow-brand-xl transition-all duration-300 font-semibold",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-brand-md",
-        outline: "border-2 border-primary bg-background text-primary hover:bg-primary hover:text-primary-foreground shadow-brand-sm hover:shadow-brand-md transition-all duration-300",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-brand-sm",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary-light shadow-brand-xl hover:shadow-brand-xl hover:scale-105 transition-all duration-300 text-base font-semibold",
+        outline: "border-2 border-primary bg-background text-primary hover:bg-primary hover:text-primary-foreground shadow-brand-sm hover:shadow-brand-lg transition-all duration-300 font-semibold",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/70 shadow-brand-sm font-medium",
+        ghost: "hover:bg-accent/10 hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline font-medium",
+        hero: "gradient-hero text-primary-foreground shadow-brand-2xl hover:shadow-brand-2xl hover:scale-[1.02] transition-all duration-300 text-base font-bold tracking-wide",
       },
       size: {
         default: "h-10 px-4 py-2",
